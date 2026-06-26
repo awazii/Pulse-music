@@ -379,9 +379,7 @@ export function EventListeners(element, location, action) {
         element.querySelectorAll(".song").forEach(song => {
             let handler = (e) => {
                 const button = e.target.closest("button");
-                const source = categoryContainer
-                    ? categoryContainer.firstElementChild.textContent
-                    : playstate.source;
+               const source = button.closest(".category").firstElementChild.textContent;
                 playstate.songid = button.dataset.songid
                 playstate.source = source
                 if (button) {
