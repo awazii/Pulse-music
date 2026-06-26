@@ -596,7 +596,7 @@ button {
     .repeat,
     .playingview,
     .queue,
-    .volume-btn,{
+    .volume-btn{
         width: 24px;
         height: 24px;
     }
