@@ -596,10 +596,8 @@ button {
     .repeat,
     .playingview,
     .queue,
-    .volume-btn,
-    .play-pause-control {
+    .volume-btn,{
         width: 24px;
         height: 24px;
     }
-
 }

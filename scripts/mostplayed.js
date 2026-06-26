@@ -36,7 +36,7 @@ export function render_mostplayed() {
             let songid = song.songid;
             let songdetails = songs.find(s => s.id === songid);
             if (songdetails) {
-                mostplayedcontainer.innerHTML += `<div class="mostplayedsong">
+                mostplayedcontainer.innerHTML += `<div class="mostplayedsong" style={display:grid;}>
                   <div class="mostplayedsong-song-img ">
                                 <img src="${songdetails.image}" alt="mostplayed-song-image">
                             </div> 
@@ -54,7 +54,6 @@ export function render_mostplayed() {
     else {
         mostplayedcontainer.style.cssText = `
   display: block;
-  position: static;
   color: #b3b3b3;
   text-align: center;
   padding: 10px;
