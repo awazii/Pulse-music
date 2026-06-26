@@ -5,9 +5,6 @@
     display: flex;
     justify-content: space-between;
     height: fit-content;
-    position: sticky;
-    bottom: 0;
-    z-index: 90;
     background-color: black;
 }
 
