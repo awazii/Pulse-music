@@ -9,6 +9,7 @@ import { equaliserchecker } from "./album.js";
 import { update_recent } from "./recent.js";
 import { queuegenerator } from "./queue.js";
 import { render_mostplayed } from "./mostplayed.js";
+import { clearExistingEqualiser } from "./mediaplayer.js";
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 export function fetch_home() {
     playstate.albumpage = false;
@@ -320,6 +321,7 @@ export function playsong(button, equaliser, albumbtn, manualclick) {
         _playpause();
     }
     else {
+        clearExistingEqualiser();
         let song = songs.find(song => song.id === playstate.songid)
         playstate.currentsong.src = song.url;
         playstate.currentsong.preload = "auto";
@@ -355,12 +357,10 @@ export function playsong(button, equaliser, albumbtn, manualclick) {
             }
             if (button === "dummy") {
                 playstate.currentplayingbutton = null
-            }
-            if (playstate.albumpage) {
+            }     
                 if (equaliser) {
                     equaliser()
-                }
-            }
+              }
             if (button !== "dummy") {
                 setButtonVisualState(button, true, true)
             }

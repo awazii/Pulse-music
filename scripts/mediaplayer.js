@@ -199,6 +199,12 @@ export function currentsongupdate(song) {
     document.querySelector(".current-song-name").firstElementChild.innerHTML = song.title
     document.querySelector(".current-song-artist").firstElementChild.innerHTML = song.credits.join(", ")
 }
+export function clearExistingEqualiser() {
+    if (playstate.equaliser) {
+        playstate.equaliser.style.opacity = 0; 
+        playstate.equaliser = null;            
+    }
+}
 function _currentsong(song) {
     document.querySelector(".current-song").innerHTML = `<div class="current-song-image">
                 <img src="${song.image}" alt="current-song-img">
