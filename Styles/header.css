@@ -1,0 +1,138 @@
+.Top-Bar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content:space-between ;
+}
+
+.left,.middle,.right{
+    flex-shrink: 0;
+}
+.left{
+    width: 15%;
+}
+.logo{
+    width: 80px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.middle{
+    flex-grow: 1;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+.homebtn{
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    background-color: #1f1f1f;
+    border: none;
+    margin-left: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+    & svg{
+        fill: white;
+    }
+}
+.away{
+     & svg{
+        fill: none;
+        stroke: rgb(182, 178, 178);
+        stroke-width: 2px;
+    }
+}
+.homebtn:hover{
+    background-color: #282828;
+    transform: scale(1.03);
+}
+.homebtn:active{
+    background-color: #1f1e1e;
+    transform: scale(.99);
+    opacity: .9;
+}
+
+.search-bar{
+    width:90%;
+    height: 48px;
+    background-color: #1f1f1f;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+}
+.search-bar:hover{
+    background-color: #282828;
+    &.search-bar .search-box svg{
+        fill: white;
+    }
+}
+.searchbtn{
+    background-color:transparent;
+    border: none;
+    position: relative;
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+.search{
+    border: none;
+    background-color:transparent ;
+    color: white;
+    font-size: 16px;
+    width:90%;
+}
+.search:focus{
+    outline: none;
+}
+.search::placeholder{
+    color: #b3b3b3;
+    font-size: 16px;
+}
+.clear-search{
+    background-color: transparent;
+    border: none;
+    position: relative;
+    &:hover svg{
+        fill: white;
+    }
+}
+.right{
+    width:15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user{
+      width: 50px;
+      height: 50px;
+      background-color:  #1f1f1f ;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      position: relative;
+}
+.searchbtn.info::after,.clear-search.info::after{
+    bottom : -135%;
+}
+.user img{
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+    padding: 8px;
+}

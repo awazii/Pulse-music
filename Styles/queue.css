@@ -1,0 +1,125 @@
+.queue-header{
+    width: 100%;
+    height: 64px;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & h4{
+        position: relative;
+    }
+}
+
+.queue-header h4::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #1ed760;
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+}
+.queue-closing-btn{
+    all: unset;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+    transition: all .3s ease;
+    &:hover{
+        background-color: #2e2d2dd8;
+        cursor: pointer;
+        & svg {
+            fill: white;
+        }
+    }
+    &:active{
+        background-color: #202020d8;
+          & svg {
+            fill: rgba(255, 255, 255, 0.76);
+        }
+    }
+}
+.queue-closing-btn::after{
+    bottom: 100%;
+    margin-bottom: 5px;
+}
+.queues{
+   padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    flex: 1;
+    & .now-playing-title,.next-from{
+        margin-bottom: 6px;
+        text-transform: capitalize;
+    }  
+}
+.now-playing-song{
+
+    color: #19b34f;
+}
+.now-playing-song:hover{
+    padding-left: 8px;
+}
+.now-playing-title{
+    margin-top: 10px;
+}
+.now-playing-title,.next-from{
+    padding-left: 8px ;
+}
+
+@media (max-width: 1024px) {
+  .queue-header {
+    height: 56px;
+    padding: 6px 12px;
+  }
+  .queue-header h4 {
+    font-size: 1rem;
+  }
+  .queue-closing-btn {
+    width: 28px;
+    height: 28px;
+  }
+  .queues {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .queue-header {
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .queue-header h4::after {
+    bottom: -10%;
+  }
+  .queue-closing-btn {
+    width: 24px;
+    height: 24px;
+  }
+  .queues {
+    gap: 12px;
+    padding-left: 4px;
+  }
+  .now-playing-title,
+  .next-from {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+}
+@media (max-width: 400px) {
+  .queue-header h4 {
+    font-size: 0.85rem;
+  }
+  .queues {
+    gap: 8px;
+  }
+  .now-playing-song:hover {
+    padding-left: 4px;
+  }
+}
