@@ -7,7 +7,7 @@
     height: fit-content;
     position: fixed;
     bottom: 0;
-    z-index: 1200;
+    z-index: 90;
     background-color: black;
 }
 
