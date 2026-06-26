@@ -1,4 +1,5 @@
 import { appdata, playstate, handleAlbumPageReassign, handleHomePageReassign, getCurrentAlbumSongButton, getCurrentHomeSongButton } from "./main.js";
+import { clearExistingEqualiser } from "./mediaplayer.js";
 import { playsong } from "./home.js";
 export function queuegenerator() {
     let obj = [];
