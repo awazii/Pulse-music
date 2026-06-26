@@ -356,7 +356,7 @@ export function playsong(button, equaliser, albumbtn, manualclick) {
             if (button === "dummy") {
                 playstate.currentplayingbutton = null
             }
-            if (playstate.albumpage ) {
+            if (playstate.albumpage) {
                 if (equaliser) {
                     equaliser()
                 }
@@ -379,7 +379,9 @@ export function EventListeners(element, location, action) {
         element.querySelectorAll(".song").forEach(song => {
             let handler = (e) => {
                 const button = e.target.closest("button");
-                const source = button.closest(".category").firstElementChild.textContent;
+                const source = categoryContainer
+                    ? categoryContainer.firstElementChild.textContent
+                    : playstate.source;
                 playstate.songid = button.dataset.songid
                 playstate.source = source
                 if (button) {
