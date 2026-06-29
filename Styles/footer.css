@@ -4,7 +4,6 @@
     padding-bottom: 0px;
     display: flex;
     justify-content: space-between;
-    height: fit-content;
     position: sticky;
     bottom: 0;
     z-index: 90;
